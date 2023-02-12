@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Arotiana's\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+  C:\Program Files\nodejs\node.exe C:\Users\Arotiana's\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add gh-pages
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Inno Setup 5;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\Git\cmd;C:\flutter\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\swipl\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Druide\Antidote 9\Application\Bin64\;C:\Program Files (x86)\Druide\Antidote 9\Application\Bin32\;C:\Users\Arotiana's\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\PHP;C:\Users\Arotiana's\AppData\Roaming\Composer\vendor\bin;C:\Users\Arotiana's\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts;C:\windows\System32;C:\Program Files\MongoDB\Server\6.0\bin;C:\Users\Arotiana's\AppData\Roaming\npm;C:\Users\Arotiana's\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/next/-/next-12.2.2.tgz: ESOCKETTIMEDOUT
+  Error: https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz: ESOCKETTIMEDOUT
       at ClientRequest.<anonymous> (C:\Users\Arotiana's\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
       at Object.onceWrapper (node:events:627:28)
       at ClientRequest.emit (node:events:513:28)
@@ -27,6 +27,7 @@ Trace:
 
 npm manifest: 
   {
+    "homepage":"https://aportfolio.github.io/aportfolio",
     "name": "portfolio-react",
     "version": "0.1.0",
     "private": true,
@@ -34,6 +35,8 @@ npm manifest:
       "dev": "next dev",
       "build": "next build",
       "start": "next start",
+      "predeploy":"yarn dev",
+      "deploy":"gh-pages -d build",
       "lint": "next lint"
     },
     "dependencies": {
@@ -408,29 +411,6 @@ Lockfile:
       base64url "^3.0.1"
       tslib "^2.3.1"
   
-  "@sendgrid/client@^7.7.0":
-    version "7.7.0"
-    resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.7.0.tgz#f8f67abd604205a0d0b1af091b61517ef465fdbf"
-    integrity sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==
-    dependencies:
-      "@sendgrid/helpers" "^7.7.0"
-      axios "^0.26.0"
-  
-  "@sendgrid/helpers@^7.7.0":
-    version "7.7.0"
-    resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-7.7.0.tgz#93fb4b6e2f0dc65080440d6a784cc93e8e148757"
-    integrity sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==
-    dependencies:
-      deepmerge "^4.2.2"
-  
-  "@sendgrid/mail@^7.7.0":
-    version "7.7.0"
-    resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.7.0.tgz#aba09f5ce2e9d8ceee92284c3ea8b4a90b0e38fe"
-    integrity sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==
-    dependencies:
-      "@sendgrid/client" "^7.7.0"
-      "@sendgrid/helpers" "^7.7.0"
-  
   "@swc/helpers@0.4.2":
     version "0.4.2"
     resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.2.tgz#ed1f6997ffbc22396665d9ba74e2a5c0a2d782f8"
@@ -705,13 +685,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.1.tgz#79cccdee3e3ab61a8f42c458d4123a6768e6fbce"
     integrity sha512-lCZN5XRuOnpG4bpMq8v0khrWtUOn+i8lZSb6wHZH56ZfbIEv6XwJV84AAueh9/zi7qPVJ/E4yz6fmsiyOmXR4w==
   
-  axios@^0.26.0:
-    version "0.26.1"
-    resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
-    integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
-    dependencies:
-      follow-redirects "^1.14.8"
-  
   axobject-query@^2.2.0:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -934,11 +907,6 @@ Lockfile:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
     integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
-  
-  deepmerge@^4.2.2:
-    version "4.2.2"
-    resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
-    integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
   
   define-lazy-prop@^2.0.0:
     version "2.0.0"
@@ -1399,7 +1367,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
     integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
   
-  follow-redirects@^1.14.8, follow-redirects@^1.2.4:
+  follow-redirects@^1.2.4:
     version "1.15.2"
     resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
     integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -2331,7 +2299,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
     integrity sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
   
-  picocolors@^1.0.0:
+  picocolors@1.0.0, picocolors@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
     integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
