@@ -1,0 +1,10 @@
+{
+  "operationType": "ISR",
+  "handler": "___next_launcher.cjs",
+  "runtime": "nodejs18.x",
+  "environment": {},
+  "supportsMultiPayloads": false,
+  "launcherType": "Nodejs",
+  "shouldAddHelpers": false,
+  "shouldAddSourcemapSupport": false
+}
