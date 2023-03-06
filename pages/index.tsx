@@ -74,12 +74,7 @@ export default Home;
   const pageInfo: PageInfo = await fetchPageinfo();
   const experiences: Experience[] = await fetchExperience();   
 
-/*   const skills = undefined;
-  const projects= undefined;
-  const pageInfo = undefined;
-  const experiences = undefined; */
 
-  
   return {
     props: {
       pageInfo,
