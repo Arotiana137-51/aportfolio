@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-		EMAIL:"arotiana4612@gmail.com",
+    EMAIL:"arotiana4612@gmail.com",
     EMAIL_PASS:"rrvpantoxzhjmpsk",
     NEXT_PUBLIC_SANITY_DATASET :"production",
     NEXT_PUBLIC_SANITY_PROJECT_ID:"4fc7tplb",
