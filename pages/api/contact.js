@@ -1,7 +1,6 @@
 // Librairie
 
 export default function handler(req, res) {
-	console.log("entree dans le service de sendmail");
   if (req.method !== "POST") {
     res.status(405).json({ message: "INVALID_METHOD" });
     return;
