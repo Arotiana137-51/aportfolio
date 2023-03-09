@@ -35,6 +35,7 @@ export default function ContactMe({}: Props) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        
       });
 
       const result = await response.json();
@@ -62,10 +63,10 @@ export default function ContactMe({}: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center ">
-      <h3 className="absolute top-24 uppercase tracking-widest text-teal-400 text-2xl ">
+      <h3 className="absolute top-10 uppercase tracking-widest text-teal-400 text-2xl ">
         Contact
       </h3>
-      <div className=" top-35 md:top-auto flex-col space-y-10">
+      <div className="md:top-52 flex-col space-y-10">
         <h4 className="  text-xl md:text-2xl lg:text-4xl font-semibold text-center">
           I have got just what you need?{" "}
           <span className=" decoration-teal-500/50 underline">
