@@ -26,6 +26,7 @@ export default function ContactMe({}: Props) {
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit: SubmitHandler<Inputs> = async (formData) => {
+    console.log(JSON.stringify(formData));
     if (!isLoading) {
       setIsLoading(true);
       const response = await fetch("/api/contact", {
