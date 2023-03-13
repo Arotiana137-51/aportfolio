@@ -5,6 +5,7 @@ export default function handler(req, res) {
     res.status(405).json({ message: "INVALID_METHOD" });
     return;
   }
+
   // Check if the necessary properties exist in req.body
   if (!req.body || !req.body.name || !req.body.email || !req.body.content) {
     res.status(400).json({ message: "INVALID_PARAMETER" });
